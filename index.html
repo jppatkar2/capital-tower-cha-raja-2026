@@ -7,7 +7,6 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
 .today-test button{flex:0 0 auto;white-space:nowrap}
 .nomination-notice{margin:0 4px 12px;border:1px solid #e7b84b;border-radius:12px;background:#fff4d6;overflow:hidden;white-space:nowrap;padding:8px 0;font-size:13px;font-weight:800;color:#9b171c}
 .nomination-track{display:inline-block;padding-left:100%;animation:nominationScroll 14s linear infinite, nominationFlash 1.2s ease-in-out infinite}
-.nomination-closed{opacity:.7;cursor:not-allowed;pointer-events:none;filter:grayscale(.25)}
 @keyframes nominationScroll{from{transform:translateX(0)}to{transform:translateX(-100%)}}
 @keyframes nominationFlash{0%,100%{opacity:1}50%{opacity:.45}}
 .today-cards{display:grid;grid-template-columns:repeat(4,1fr);gap:9px}.today-card{min-height:110px;border:1px solid #eadfd2;background:#fff;border-radius:16px;padding:12px;box-shadow:0 3px 10px #0000000d}.today-card h4{margin:0 0 7px;font-size:16px}.today-card p{margin:0;font-size:14px;line-height:1.35}.badge{display:inline-block;margin-top:10px;padding:6px 10px;border-radius:999px;font-size:11px;font-weight:800}.badge.open{background:#dff5df;color:#137333}.badge.req{background:#fff0d8;color:#e56c00}.sections{padding:0 24px;min-width:0;overflow:hidden}.section{background:#fff;width:100%;min-width:0;border:1px solid #eee6dd;border-radius:21px;margin:10px 0;box-shadow:0 4px 15px #00000013;overflow:hidden}.section-head{width:100%;border:0;background:#fff;display:flex;align-items:center;gap:14px;padding:14px 18px;text-align:left;cursor:pointer}.icon{flex:0 0 56px;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:28px;font-weight:700}.icon.red{background:var(--maroon)}.icon.orange{background:var(--orange)}.icon.green{background:var(--green)}.icon.purple{background:var(--purple)}.icon.blue{background:var(--blue)}.section-title{flex:1;min-width:0}.section-title h2{margin:0 0 5px;font-size:21px;line-height:1.1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.section-title p{margin:0;color:#2f2925;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.count{flex:0 0 auto;padding:11px 17px;border-radius:13px;background:#f9ecec;color:var(--maroon);font-weight:800;font-size:14px;text-align:center}.arrow{flex:0 0 48px;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;background:var(--maroon);color:#fff;font-size:27px;transition:.25s}.section.open .arrow{transform:rotate(180deg)}.section-body{max-height:0;overflow:hidden;transition:max-height .35s ease;border-top:0 solid var(--line)}.section.open .section-body{border-top:1px solid var(--line)}.inner{padding:14px 18px 18px}.event{padding:13px 14px;margin:8px 0;border:1px solid #eee5da;border-radius:14px;background:linear-gradient(180deg,#fff,#fffaf5)}.event h3{margin:0 0 5px;color:var(--maroon);font-size:16px}.event p{margin:4px 0;font-size:14px;line-height:1.45}.register{display:inline-block;margin-top:7px;background:var(--maroon);color:#fff;text-decoration:none;padding:9px 13px;border-radius:10px;font-weight:800;font-size:12px}.note{padding:12px;border-radius:12px;background:#fff6df;color:#6b4a12;font-size:13px}.legend{margin:18px 24px 12px;padding:16px 18px;background:#fffdf9;border:1px solid #eadfd0;border-radius:18px;display:flex;justify-content:center;gap:34px;flex-wrap:wrap;color:#4d433c}.legend-item{display:flex;align-items:center;gap:9px;font-size:13px}.dot{width:20px;height:20px;border-radius:50%}.dot.green{background:var(--green)}.dot.orange{background:var(--orange)}.footer{margin:10px 24px 0;padding:23px 18px;text-align:center;border-radius:20px;background:linear-gradient(90deg,#fff1c7,#fff8e7,#fff1c7);font-size:16px}.footer strong{display:block;color:var(--maroon);font-size:22px;margin-top:5px}@media(max-width:800px){.today-cards{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){
@@ -189,7 +188,7 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
     <input type="date" id="testTodayDate" min="2026-09-14" max="2026-09-25" onchange="setTodayEvents(this.value)">
     <button type="button" onclick="resetTodayEvents()">TODAY</button>
   </div>
-  <div class="nomination-notice" id="nominationNotice"><span class="nomination-track">📝 Nomination Links Deadline &nbsp; • &nbsp; All the nomination links will be open till 18th September 2026, 11:59 PM only</span></div>
+  <div class="nomination-notice"><span class="nomination-track">Nomination Links Deadline &nbsp; • &nbsp; All the nomination links will be open till 18th September only</span></div>
   <div class="today-cards" id="todayEvents"></div>
 </section>
 <div class="horizontal-lower">
@@ -219,7 +218,7 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
 
   <section id="schedule" class="panel">
     <h2>📅 Festival Schedule</h2>
-    <div class="event"><span class="badge free">NO REGISTRATION</span><h4>14 September (Monday) • Bappa Aagman</h4><p>🕙 10:00 AM onwards</p></div>
+    <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>14 September (Monday) • Bappa Aagman</h4><p>🕙 10:00 AM onwards</p></div>
     <div class="event"><span class="badge free">NO REGISTRATION</span><h4>14 September (Monday) • Ganesh Sthapana &amp; Pooja</h4><p>🕐 1:00 PM onwards</p></div>
     <div class="event"><span class="badge free">NO REGISTRATION</span><h4>15–17 September • Musical Chair &amp; Surprise Games</h4><p>🕖 7:00 PM onwards</p><p>Musical chair for all age groups and other surprise games (Non-prize).</p></div>
     <div class="event"><span class="badge free">NO REGISTRATION</span><h4>18 September (Friday) • Kids Games</h4><p>🕗 8:00 PM onwards</p></div>
@@ -246,15 +245,16 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
     <div class="event"><h4>🌆 Evening Aarati</h4><p>Every day • 7:00 PM</p></div>
     <p>Aarati Nominations are open.</p>
     <p class="spoc"><strong>👤 SPOC: Dinesh Kumar • 9422707500</strong></p>
-    <a class="btn" href="https://script.google.com/macros/s/AKfycbz4xiWZgbmsAIter3dAVAv1iK1d57VtgPosYyaPYrx02mLtxYLbyuY4PBaMt_MeQVVJRQ/exec" target="_blank">🙏 RESGISTER FOR AARATI SLOTS ↗</a>
+    <a class="btn" href="https://script.google.com/macros/s/AKfycbz4xiWZgbmsAIter3dAVAv1iK1d57VtgPosYyaPYrx02mLtxYLbyuY4PBaMt_MeQVVJRQ/exec" target="_blank">🙏 REGISTER FOR AARATI SLOTS ↗</a>
   </section>
 
   <section id="competitions" class="panel">
     <h2>🏆 Competitions & Games</h2>
-    <div class="event" style="text-align:center;"><a class="btn nomination-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeXFr-JRSFAW3Lye4JSnLsYicEhV99eiUCcpKlKRIge0jwx7Q/viewform?pli=1" target="_blank">📝 REGISTER FOR CHESS, CARROM, TUG OF WAR & RANGOLI ↗</a></div>
+    <div class="event" style="text-align:center;"><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSeXFr-JRSFAW3Lye4JSnLsYicEhV99eiUCcpKlKRIge0jwx7Q/viewform?pli=1" target="_blank">📝 REGISTER FOR CHESS, CARROM, TUG OF WAR & RANGOLI ↗</a></div>
     <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>♟️ Chess</h4><p>19 September (Saturday) • 11:00 AM onwards</p><p class="spoc">👤 <strong>SPOC:</strong> Samir Swain • 9823926048</p></div>
     <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>🎯 Carrom</h4><p>19 September (Saturday) • 11:00 AM onwards</p><p class="spoc">👤 <strong>SPOC:</strong> Ajay Singh • 9823971165</p></div>
     <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>⚔️ Tug of WAR — Kids / Gents / Ladies</h4><p>19 September (Saturday) • 8:00 PM onwards</p><p class="spoc">👤 <strong>SPOC:</strong> Nilesh Chaudhari • 9867412726</p></div>
+    <div class="event"><span class="badge free">NO REGISTRATION REQUIRED</span><h4>🗺️ Drawing Competition</h4><p>19 September (Saturday) • 09:00 AM Onwards</p><p class="spoc">👤 <strong>SPOC:</strong> Priti Bet • 9822364277</p></div>
     <div class="event"><span class="badge free">NO REGISTRATION REQUIRED</span><h4>🗺️ Treasure Hunt</h4><p>20 September (Sunday) • 10:00 AM</p><p class="spoc">👤 <strong>SPOC:</strong> ABCD</p></div>
     <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>🎨 Rangoli</h4><p>20 September (Sunday) • 12:00 PM – 2:00 PM</p><p class="spoc">👤 <strong>SPOC:</strong> Supriya Samal • 9738088209</p></div>
   </section>
@@ -262,7 +262,7 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
   <section id="cultural" class="panel">
      <h2>🎭 Cultural Events</h2>
      <div class="event" style="margin-bottom:14px;text-align:center">
-       <a class="btn nomination-link" href="https://docs.google.com/forms/d/e/1FAIpQLSdj8wZcRapvQmPVQjSQa2UGlwWGEyQMFRZBw3uORRsmae5fuQ/viewform?usp=header" target="_blank">🎭 CULTURAL EVENT REGISTRATION ↗</a>
+       <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdj8wZcRapvQmPVQjSQa2UGlwWGEyQMFRZBw3uORRsmae5fuQ/viewform?usp=header" target="_blank">🎭 CULTURAL EVENT REGISTRATION ↗</a>
      </div>
      <p class="spoc">👤 <strong>SPOC:</strong> Urmila Shinde • 9881137893</p>
      <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>Day 1 • 20 September (Sunday)</h4><p>8:00 PM – 10:30 PM<br>Skit • Songs • Karaoke • Musical Instruments</p></div>
@@ -274,7 +274,7 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
 
   <section id="food" class="panel">
     <h2>🍽️ Food Stalls</h2>
-    <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>19 September (Saturday)</h4><p>🕔 5:00 PM – 7:30 PM</p><p>Food stall nominations are open.</p><p class="spoc">👤 <strong>SPOC:</strong> Surekha Nikam • 7709046278</p><a class="btn nomination-link" href="https://docs.google.com/forms/d/e/1FAIpQLSf3-sh9AjlF1dstekh6AnAiKK_scCvmB-6j5cEpOQ2mpZHRVA/viewform?usp=header" target="_blank">Register Food Stall ↗</a></div>
+    <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>19 September (Saturday)</h4><p>🕔 5:00 PM – 7:30 PM</p><p>Food stall nominations are open.</p><p class="spoc">👤 <strong>SPOC:</strong> Surekha Nikam • 7709046278</p><a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSf3-sh9AjlF1dstekh6AnAiKK_scCvmB-6j5cEpOQ2mpZHRVA/viewform?usp=header" target="_blank">Register Food Stall ↗</a></div>
   </section>
 
   <section id="mahaprasad" class="panel special">
@@ -285,7 +285,7 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
 
   <section id="visarjan" class="panel special">
     <h2>🪔 Visarjan</h2>
-    <div class="event"><span class="badge special-badge">Pudhchya Varshi Lavakar Ya - Because our Homes feel empty without You.</span><h4>25 September (Friday)</h4><p>🕥 10:30 AM onwards</p><p>🙏 Join us for the grand Visarjan and seek Bappa's blessings.</p></div>
+    <div class="event"><span class="badge special-badge">Pudhchya Varshi Lavakar Ya - Your absence dims our home.</span><h4>25 September (Friday)</h4><p>🕥 10:30 AM onwards</p><p>🙏 Join us for the Grand Visarjan and seek Bappa's Blessings.</p></div>
   </section>
 
   <div class="note" style="margin-top:18px;text-align:center">
@@ -300,38 +300,6 @@ html{scroll-behavior:smooth}body{margin:0;overflow-x:hidden;background:radial-gr
 <script>function setHeight(s){const b=s.querySelector('.section-body');b.style.maxHeight=s.classList.contains('open')?b.scrollHeight+'px':'0px'}function toggleSection(s){const open=s.classList.contains('open');document.querySelectorAll('.section').forEach(x=>{x.classList.remove('open');setHeight(x)});if(!open){s.classList.add('open');setHeight(s)}}function openSection(id){const s=document.getElementById(id);if(!s)return;document.querySelectorAll('.section').forEach(x=>{x.classList.remove('open');setHeight(x)});s.classList.add('open');setHeight(s);setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'start'}),60)}window.addEventListener('resize',()=>document.querySelectorAll('.section.open').forEach(setHeight));
 
 /* Dynamic Today's Events + test-date mode */
-const NOMINATIONS_MANUAL_OVERRIDE = false;
-const NOMINATIONS_DEADLINE = new Date("2026-09-18T23:59:59+05:30");
-
-function nominationsAreOpen(testDateKey){
-  if (NOMINATIONS_MANUAL_OVERRIDE) return true;
-  if (testDateKey) return testDateKey <= "2026-09-18";
-  return new Date() <= NOMINATIONS_DEADLINE;
-}
-
-function updateNominationLinks(testDateKey){
-  const open = nominationsAreOpen(testDateKey);
-  const links = document.querySelectorAll("a.nomination-link");
-  links.forEach(link => {
-    if(!link.dataset.originalHref) link.dataset.originalHref = link.getAttribute("href") || "";
-    if(!link.dataset.openText) link.dataset.openText = link.innerHTML;
-
-    if(open){
-      link.setAttribute("href", link.dataset.originalHref);
-      link.classList.remove("nomination-closed");
-      link.removeAttribute("aria-disabled");
-      link.removeAttribute("tabindex");
-      link.innerHTML = link.dataset.openText;
-    }else{
-      link.removeAttribute("href");
-      link.classList.add("nomination-closed");
-      link.setAttribute("aria-disabled","true");
-      link.setAttribute("tabindex","-1");
-      link.innerHTML = "🔒 NOMINATIONS CLOSED";
-    }
-  });
-}
-
 const festivalEvents = {
   "2026-09-14":[["Bappa Aagman","10:00 AM onwards","NO REGISTRATION"],["Ganesh Sthapana & Pooja","1:00 PM onwards","NO REGISTRATION"]],
   "2026-09-15":[["Musical Chair & Surprise Games","7:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
@@ -351,7 +319,6 @@ function formatTodayDate(d){return d.toLocaleDateString("en-IN",{day:"numeric",m
 function setTodayEvents(testValue){
   const d=testValue ? new Date(testValue+"T12:00:00") : new Date();
   const key=localDateKey(d);
-  updateNominationLinks(testValue ? key : undefined);
   const label=document.getElementById("todayLabel");
   const title=document.getElementById("todayTitle");
   const box=document.getElementById("todayEvents");
@@ -390,5 +357,4 @@ function openPanel(id){
     setTimeout(()=>panel.scrollIntoView({behavior:'smooth',block:'start'}),40);
   }
 }
-updateNominationLinks();
 </script></body></html>
