@@ -895,7 +895,7 @@ body.schedule-open{overflow:hidden}
 <h2>📅 Festival Schedule</h2>
 <div class="event"><span class="badge free">NO REGISTRATION</span><h4>14 September (Monday) • Bappa Aagman</h4><p>🕙 10:00 AM onwards</p></div>
 <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>14 September (Monday) • Ganesh Sthapana &amp; Pooja</h4><p>🕐 1:00 PM onwards</p></div>
-<div class="event"><span class="badge free">NO REGISTRATION</span><h4>15–17 September • Musical Chair &amp; Surprise Games</h4><p>🕖 7:00 PM onwards</p><p>Musical chair for all age groups and other surprise games (Non-prize).</p></div>
+<div class="event"><span class="badge free">NO REGISTRATION REQUIRED</span><h4>15–17 September • Musical Chair &amp; Surprise Games</h4><p>🕖 7:00 PM onwards</p><p>Musical chair for all age groups and other surprise games (Non-prize).</p></div>
 <div class="event"><span class="badge free">NO REGISTRATION</span><h4>18 September (Friday) • Kids Games</h4><p>🕗 8:00 PM onwards</p></div>
 <div class="event"><span class="badge free">NO REGISTRATION</span><h4>19 September (Saturday) • Drawing Competition</h4><p>🕘 9:00 AM</p></div>
 <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>19 September (Saturday) • Chess &amp; Carrom</h4><p>🕚 11:00 AM onwards</p></div>
@@ -903,12 +903,12 @@ body.schedule-open{overflow:hidden}
 <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>19 September (Saturday) • Tug of War</h4><p>🕗 8:00 PM onwards</p></div>
 <div class="event"><span class="badge free">NO REGISTRATION</span><h4>20 September (Sunday) • Treasure Hunt</h4><p>🕙 10:00 AM</p></div>
 <div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>20 September (Sunday) • Rangoli Competition</h4><p>🕛 12:00 PM – 2:00 PM</p></div>
-<div class="event"><h4>20 September (Sunday) • Remaining Carrom &amp; Chess Games</h4><p>🕛 12:00 PM – 5:00 PM</p></div>
-<div class="event"><h4>20 September (Sunday) • Events Day 1</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Skit • Songs • Karaoke • Musical Instruments</p></div>
-<div class="event"><h4>21 September (Monday) • Events Day 2</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Kids Fancy Dress • Dance</p></div>
-<div class="event"><h4>22 September (Tuesday) • Events Day 3</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Dance • Other Events</p></div>
-<div class="event"><h4>23 September (Wednesday) • Events Day 4</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Dance • Other Events</p></div>
-<div class="event"><span class="badge free">NO REGISTRATION</span><h4>24 September (Thursday) • Satyanarayan Pooja</h4><p>🕒 3:00 PM - 5:00 PM</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>20 September (Sunday) • Remaining Carrom &amp; Chess Games</h4><p>🕛 12:00 PM – 5:00 PM</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>20 September (Sunday) • Events Day 1</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Skit • Songs • Karaoke • Musical Instruments</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>21 September (Monday) • Events Day 2</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Kids Fancy Dress • Dance</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>22 September (Tuesday) • Events Day 3</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Dance • Other Events</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>23 September (Wednesday) • Events Day 4</h4><p>🕗 8:00 PM – 10:30 PM</p><p>Dance • Other Events</p></div>
+<div class="event"><span class="badge required">REGISTRATION REQUIRED</span><h4>24 September (Thursday) • Satyanarayan Pooja</h4><p>🕒 3:00 PM - 5:00 PM</p></div>
 <div class="event"><h4>24 September (Thursday) • Mahaprasad</h4><p>🕗 8:00 PM – 10:30 PM</p></div>
 <div class="event"><span class="badge special-badge">FAREWELL</span><h4>25 September (Friday) • Visarjan</h4><p>🕥 10:30 AM</p></div>
 </section></div></div><script>function setHeight(s){const b=s.querySelector('.section-body');b.style.maxHeight=s.classList.contains('open')?b.scrollHeight+'px':'0px'}function toggleSection(s){const open=s.classList.contains('open');document.querySelectorAll('.section').forEach(x=>{x.classList.remove('open');setHeight(x)});if(!open){s.classList.add('open');setHeight(s)}}function openSection(id){const s=document.getElementById(id);if(!s)return;document.querySelectorAll('.section').forEach(x=>{x.classList.remove('open');setHeight(x)});s.classList.add('open');setHeight(s);setTimeout(()=>s.scrollIntoView({behavior:'smooth',block:'start'}),60)}window.addEventListener('resize',()=>document.querySelectorAll('.section.open').forEach(setHeight));
@@ -947,17 +947,17 @@ function updateNominationLinks(testDateKey){
 }
 
 const festivalEvents = {
-  "2026-09-14":[["Bappa Aagman","10:00 AM onwards","NO REGISTRATION"],["Ganesh Sthapana & Pooja","1:00 PM onwards","NO REGISTRATION"]],
-  "2026-09-15":[["Musical Chair & Surprise Games","7:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
-  "2026-09-16":[["Musical Chair & Surprise Games","7:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
-  "2026-09-17":[["Musical Chair & Surprise Games","7:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
+  "2026-09-14":[["Bappa Aagman","10:00 AM onwards","NO REGISTRATION"],["Ganesh Sthapana & Pooja","1:00 PM onwards","REGISTRATION REQUIRED"]],
+  "2026-09-15":[["Musical Chair & Surprise Games","8:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
+  "2026-09-16":[["Musical Chair & Surprise Games","8:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
+  "2026-09-17":[["Musical Chair & Surprise Games","8:00 PM onwards","NO REGISTRATION"],["Ganpati Festival","15–17 September","NO REGISTRATION"]],
   "2026-09-18":[["Kids Games","8:00 PM onwards","NO REGISTRATION"]],
   "2026-09-19":[["Drawing Competition","9:00 AM","NO REGISTRATION"],["Chess & Carrom","11:00 AM onwards","REGISTRATION REQUIRED"],["Food Stalls","5:00 PM – 7:30 PM","REGISTRATION REQUIRED"],["Tug of War","8:00 PM onwards","REGISTRATION REQUIRED"]],
-  "2026-09-20":[["Treasure Hunt","10:00 AM","NO REGISTRATION"],["Rangoli Competition","12:00 PM – 2:00 PM","REGISTRATION REQUIRED"],["Remaining Carrom & Chess Games","12:00 PM – 5:00 PM","NO REGISTRATION"],["Cultural Events Day 1","8:00 PM – 10:30 PM","NO REGISTRATION"]],
-  "2026-09-21":[["Cultural Events Day 2","8:00 PM – 10:30 PM","NO REGISTRATION"]],
-  "2026-09-22":[["Cultural Events Day 3","8:00 PM – 10:30 PM","NO REGISTRATION"]],
-  "2026-09-23":[["Cultural Events Day 4","8:00 PM – 10:30 PM","NO REGISTRATION"]],
-  "2026-09-24":[["Satyanarayan Pooja","3:00 PM - 5:00 PM","NO REGISTRATION"],["Mahaprasad","8:00 PM – 10:30 PM","NO REGISTRATION"]],
+  "2026-09-20":[["Treasure Hunt","10:00 AM","NO REGISTRATION"],["Rangoli Competition","12:00 PM – 2:00 PM","REGISTRATION REQUIRED"],["Remaining Carrom & Chess Games","12:00 PM – 5:00 PM","REGISTRATION REQUIRED"],["Cultural Events Day 1","8:00 PM – 10:30 PM","REGISTRATION REQUIRED"]],
+  "2026-09-21":[["Cultural Events Day 2","8:00 PM – 10:30 PM","REGISTRATION REQUIRED"]],
+  "2026-09-22":[["Cultural Events Day 3","8:00 PM – 10:30 PM","REGISTRATION REQUIRED"]],
+  "2026-09-23":[["Cultural Events Day 4","8:00 PM – 10:30 PM","REGISTRATION REQUIRED"]],
+  "2026-09-24":[["Satyanarayan Pooja","3:00 PM - 5:00 PM","REGISTRATION REQUIRED"],["Mahaprasad","8:00 PM – 10:30 PM","NO REGISTRATION"]],
   "2026-09-25":[["Visarjan","10:30 AM","GRAND FINALE"]]
 };
 function localDateKey(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
