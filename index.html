@@ -1144,7 +1144,8 @@ function openCulturalSchedule(){
   overlay.setAttribute('aria-hidden','false');
   document.body.classList.add('schedule-open');
 
-  const todayKey=getIndiaTodayKey();
+  const dateInput=document.getElementById('testTodayDate');
+const todayKey=dateInput && dateInput.value ? dateInput.value : getIndiaTodayKey();
   if(todayKey < '2026-09-19'){
     title.textContent='🎭 Cultural Events & Performances';
     subtitle.textContent='Schedule publication';
@@ -1175,7 +1176,7 @@ function openCulturalSchedule(){
     content.innerHTML='<div class="aarti-bookings-empty">Unable to load the performance schedule right now. Please try again.</div>';
   };
   script.src='https://script.google.com/macros/s/AKfycbz4xiWZgbmsAIter3dAVAv1iK1d57VtgPosYyaPYrx02mLtxYLbyuY4PBaMt_MeQVVJRQ/exec'+
-    '?api=culturalSchedule&callback='+encodeURIComponent(callbackName)+'&today='+encodeURIComponent(todayKey)+'&t='+Date.now();
+    '?api=culturalSchedule&callback='+encodeURIComponent(callbackName)+'&date='+encodeURIComponent(todayKey)+'&today='+encodeURIComponent(todayKey)+'&t='+Date.now();
   document.head.appendChild(script);
   setTimeout(()=>{
     if(finished)return;
